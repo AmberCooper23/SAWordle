@@ -1,6 +1,6 @@
 import './GameStatus.css';
 
-export function GameStatus({ gameOver, won, targetWord, onPlayAgain }) {
+export function GameStatus({ gameOver, won, targetWord }) {
   if (!gameOver) return null;
 
   return (
@@ -13,9 +13,6 @@ export function GameStatus({ gameOver, won, targetWord, onPlayAgain }) {
           The word was: <strong>{targetWord}</strong>
         </p>
       )}
-      <button onClick={onPlayAgain} className="gameStatusButton">
-        Play Again
-      </button>
     </aside>
   );
 }
