@@ -5,7 +5,7 @@ export function useGameLogic() {
   const { getDailyWord } = useWords();
   const [targetWord, setTargetWord] = useState('');
   const [wordLength, setWordLength] = useState(5);
-  const [guesses, setGuesses] = useState(Array(6).fill(''));
+  const [guesses, setGuesses] = useState(Array(6).fill(null));
   const [currentGuess, setCurrentGuess] = useState('');
   const [currentRow, setCurrentRow] = useState(0);
   const [gameOver, setGameOver] = useState(false);
@@ -30,17 +30,15 @@ export function useGameLogic() {
 
   const updateKeyboardState = (guess) => {
     const newState = { ...keyboardState };
-
     guess.split('').forEach((letter, i) => {
       if (targetWord[i] === letter) {
         newState[letter] = 'correct';
       } else if (targetWord.includes(letter) && newState[letter] !== 'correct') {
         newState[letter] = 'present';
-      } else if (!targetWord.includes(letter)) {
+      } else {
         newState[letter] = 'absent';
       }
     });
-
     setKeyboardState(newState);
   };
 
@@ -48,7 +46,7 @@ export function useGameLogic() {
     if (currentGuess.length !== wordLength || gameOver) return;
 
     const newGuesses = [...guesses];
-    newGuesses[currentRow] = currentGuess;
+    newGuesses[currentRow] = currentGuess.split('');
     setGuesses(newGuesses);
 
     updateKeyboardState(currentGuess);
@@ -76,7 +74,7 @@ export function useGameLogic() {
   };
 
   const resetGame = () => {
-    setGuesses(Array(6).fill(''));
+    setGuesses(Array(6).fill(null));
     setCurrentGuess('');
     setCurrentRow(0);
     setGameOver(false);
@@ -86,7 +84,6 @@ export function useGameLogic() {
 
   useEffect(() => {
     if (gameOver) return;
-
     const handleKeyDown = (e) => {
       if (e.key === 'Enter') {
         handleEnter();
@@ -96,7 +93,6 @@ export function useGameLogic() {
         handleLetter(e.key.toUpperCase());
       }
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentGuess, currentRow, gameOver, targetWord, wordLength]);

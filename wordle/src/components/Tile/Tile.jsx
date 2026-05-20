@@ -1,7 +1,20 @@
 import './Tile.css';
 
 export function Tile({ letter, state, wordLength }) {
-  const sizeClass = wordLength <= 5 ? 'tileLarge' : wordLength <= 7 ? 'tileMedium' : 'tileSmall';
+  let sizeClass;
+
+  if (wordLength === 3) {
+    sizeClass = 'tileXLarge';   
+  } else if (wordLength === 4) {
+    sizeClass = 'tileLarge';    
+  } else if (wordLength <= 5) {
+    sizeClass = 'tileMedium';   
+  } else if (wordLength <= 7) {
+    sizeClass = 'tileSmall';   
+  } else {
+    sizeClass = 'tileTiny';     
+  }
+
   const stateClass = `tile${state.charAt(0).toUpperCase()}${state.slice(1)}`;
 
   return (
@@ -11,4 +24,4 @@ export function Tile({ letter, state, wordLength }) {
   );
 }
 
-export default Tile
+export default Tile;
