@@ -1,0 +1,35 @@
+.gameStatus {
+  text-align: center;
+}
+
+.gameStatusMessage {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.gameStatusWord {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.gameStatusWord strong {
+  font-weight: bold;
+}
+
+.gameStatusButton {
+  background-color: rgb(22 163 74);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.gameStatusButton:hover {
+  background-color: rgb(21 128 61);
+}

@@ -1,0 +1,70 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 32rem;
+}
+
+.keyboardRow {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.keyboardKey {
+  font-weight: bold;
+  border-radius: 0.25rem;
+  padding: 1rem 0.75rem;
+  transition: background-color 0.2s, color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.keyboardKey:disabled {
+  cursor: not-allowed;
+}
+
+.keyboardKeySpecial {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.keyboardKeyCorrect {
+  background-color: rgb(22 163 74);
+  color: white;
+}
+
+.keyboardKeyPresent {
+  background-color: rgb(234 179 8);
+  color: white;
+}
+
+.keyboardKeyAbsent {
+  background-color: rgb(107 114 128);
+  color: white;
+}
+
+.keyboardKeyUnused {
+  background-color: rgb(229 231 235);
+  color: black;
+}
+
+.keyboardKeyUnused:not(:disabled):hover {
+  background-color: rgb(209 213 219);
+}
+
+.keyboardKeySpecial.keyboardKeyAbsent {
+  background-color: rgb(107 114 128);
+  color: white;
+}
+
+.keyboardKeySpecial:not(.keyboardKeyAbsent) {
+  background-color: rgb(209 213 219);
+  color: black;
+}

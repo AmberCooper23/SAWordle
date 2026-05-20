@@ -1,0 +1,30 @@
+.tile {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.tileSmall {
+  width: 2rem;       
+  height: 2rem;      
+  font-size: 1rem;  
+  line-height: 1.5rem;
+}
+
+.tileMedium {
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.tileLarge {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
