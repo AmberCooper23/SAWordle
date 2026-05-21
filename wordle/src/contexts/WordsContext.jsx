@@ -4,10 +4,10 @@ const WORDS = [
   //3 letters
   'KAK', 'NEH', 'BRU',
   // 4 letters
-  'EINA', 'AWEH', 'LANK', 'BOET', 'NAAI', 'EISH', 'SKEL', 'GAAN', 'DOOS', 'BOER',
+  'EINA', 'AWEH', 'LANK', 'BOET', 'NAAI', 'EISH', 'SKEL', 'GAAN', 'DOOS', 'BOER', 'WOZA', 'HADE', 'FEDE',
   // 5 letters
   'SHARP', 'CHINA', 'ROBOT', 'BRAAI', 'BUNNY', 'HAIBO', 'KWAAI',
-  'DWAAL', 'VLOEK', 'SLANG', 'SKRIK', 'STOEP', 'SMAAK', 'TJANK', 
+  'DWAAL', 'VLOEK', 'SLANG', 'SKRIK', 'STOEP', 'SMAAK', 'TJANK', 'SFEBE',
   'YSTER', 'MOERS', 'BAKKE', 'HAIBO', 'BALIE', 'LEKKE', 'CHANA', 'HOWZA', 'PHARA',
    'JIRRE',
   // 6 letters
