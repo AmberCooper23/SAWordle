@@ -5,6 +5,7 @@ const WORDS = [
   'KAK', 'NEH', 'BRU',
   // 4 letters
   'EINA', 'AWEH', 'LANK', 'BOET', 'NAAI', 'EISH', 'SKEL', 'GAAN', 'DOOS', 'BOER', 'WOZA', 'HADE', 'FEDE', 'AOWA', 'BLOM', 'BAAS',
+  'POES',
   // 5 letters
   'SHARP', 'CHINA', 'ROBOT', 'BRAAI', 'BUNNY', 'HAIBO', 'KWAAI',
   'DWAAL', 'VLOEK', 'SLANG', 'SKRIK', 'STOEP', 'SMAAK', 'TJANK', 'SFEBE',
@@ -16,7 +17,7 @@ const WORDS = [
   // 7 letters
   'VOETSEK', 'BLIKSEM', 'CHOMMIE', 'TEKKIES', 'NAARTJE', 'HOWZITS',
   // 8 letters
-  'JISLAAIK', 'CHERRIES', 'ZAMALEK'
+  'JISLAAIK', 'CHERRIES', 'ZAMALEK', 'POESKLAP'
 ];
 
 const WordsContext = createContext(undefined);
